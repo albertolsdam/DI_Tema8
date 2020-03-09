@@ -35,29 +35,34 @@ public class MasGrandeTest {
     public void testMaxCardinalidad() {
         System.out.println("Max - Test Cardinalidad");
         int[] a = new int[]{};
-        assertEquals(MasGrande.max(a), 0);
+        assertEquals(0, MasGrande.max(a));
+        
         a = new int[]{1};
-        assertEquals(MasGrande.max(a), 1);
+        assertEquals(1, MasGrande.max(a));
+        
         a = new int[]{2,3,4};
-        assertEquals(MasGrande.max(a), 4);
+        assertEquals(4, MasGrande.max(a));
+        
+        a = new int[]{-8,-3,-4};
+        assertEquals(-3, MasGrande.max(a));
     }
     
     @Test
     public void testMaxOrden() {
         System.out.println("Max - Test Orden");
         int[] a = new int[]{5,3,9};
-        assertEquals(MasGrande.max(a), 9);
+        assertEquals(9, MasGrande.max(a));
         a = new int[]{3,4,5};
-        assertEquals(MasGrande.max(a), 5);
+        assertEquals(5, MasGrande.max(a));
         a = new int[]{5,4,3};
-        assertEquals(MasGrande.max(a), 5);
+        assertEquals(5, MasGrande.max(a));
     }
     
     @Test
     public void testMaxRango() {
         System.out.println("Max - Test Rango");
         int[] a = new int[]{-2147483647,2147483647};
-        assertEquals(MasGrande.max(a), 2147483647);
+        assertEquals(2147483647, MasGrande.max(a));
     }
     
     
@@ -65,16 +70,16 @@ public class MasGrandeTest {
     public void testMaxExistencia() {
         System.out.println("Max - Test Existencia");
         int[] a = new int[]{};
-        assertEquals(MasGrande.max(a), 0);
+        assertEquals(0, MasGrande.max(a));
         a = null;
-        assertEquals(MasGrande.max(a), 0);
+        assertEquals(0, MasGrande.max(a));
     }
     
     @Test(timeout = 1000)
     public void testMaxTiempo() {
         System.out.println("Max - Test Tiempo");
         int[] a = new int[]{123,62,21,1123,3,629,24};
-        assertEquals(MasGrande.max(a), 1123);
+        assertEquals(1123, MasGrande.max(a));
     }
     
 }
